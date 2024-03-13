@@ -1,6 +1,17 @@
 plugins {
     id 'java'
 }
+apply plugin: 'maven-publish'
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'org.example'
+            artifactId 'module_01'
+            version '0.1'
+            from components.java
+        }
+    }
+}
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
