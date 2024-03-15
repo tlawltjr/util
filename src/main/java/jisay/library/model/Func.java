@@ -2,7 +2,7 @@ package jisay.library.model;
 
 import org.modelmapper.ModelMapper;
 
-public interface To {
+public interface Func {
     default <DTO, ENTITY> DTO entityToDto(Class<DTO> dtoClass, ENTITY entity) {
         ModelMapper modelMapper = new ModelMapper();
 
