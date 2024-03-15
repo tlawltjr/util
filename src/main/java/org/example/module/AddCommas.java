@@ -1,7 +1,7 @@
 package org.example.module;
 
 public class AddCommas {
-    public String addComma(int price){
+    public String addComma(Long price){
         String pToString = String.valueOf(price);
         StringBuilder result = new StringBuilder();
 
