@@ -7,6 +7,7 @@ public class CrudAuto {
         ModelMapper modelMapper = new ModelMapper();
 
         return modelMapper.map(entity, dtoClass);
+        //asd
     }
 
     public <ENTITY, DTO> ENTITY dtoToEntity(Class<ENTITY> entityClass, DTO dto) {
