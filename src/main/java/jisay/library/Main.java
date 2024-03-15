@@ -1,7 +1,5 @@
-package org.example;
+package jisay.library;
 
-
-import org.example.module.CrudAuto;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.example.module;
+package jisay.library.module;
 
 import org.modelmapper.ModelMapper;
 

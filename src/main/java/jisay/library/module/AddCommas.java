@@ -1,4 +1,4 @@
-package org.example.module;
+package jisay.library.module;
 
 public class AddCommas {
     public String addComma(Long price){

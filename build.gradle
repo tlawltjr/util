@@ -3,7 +3,7 @@ plugins {
 
 }
 
-group = 'org.example'
+group = 'jisay.library'
 version = '1.0-SNAPSHOT'
 
 repositories {
