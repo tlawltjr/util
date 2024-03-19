@@ -1,0 +1,8 @@
+
+X
+java:S1854
+"6Remove this useless assignment to local variable "ca".(Éè²Óşÿÿÿÿ8äÉû’ä1
+I
+java:S1481
+"'Remove this unused "ca" local variable.(Éè²Óşÿÿÿÿ8æÉû’ä1
+L	java:S106"+Replace this use of System.out by a logger.(åÀ¼¶şÿÿÿÿ8Í®æ’ä1
