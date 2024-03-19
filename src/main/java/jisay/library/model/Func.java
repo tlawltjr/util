@@ -1,8 +1,11 @@
 package jisay.library.model;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import org.json.simple.parser.ParseException;
 import org.modelmapper.ModelMapper;
 
 public interface Func {
+
     default <DTO, ENTITY> DTO entityToDto(Class<DTO> dtoClass, ENTITY entity) {
         ModelMapper modelMapper = new ModelMapper();
 
@@ -14,4 +17,6 @@ public interface Func {
 
         return modelMapper.map(dto, entityClass);
     }
+
+    <O> O parse(String response, String key) throws JsonProcessingException, ParseException;
 }
