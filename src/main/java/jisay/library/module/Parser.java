@@ -30,6 +30,7 @@ public class Parser implements Func {
             O result = mapper.readValue(jsonObject.toJSONString(), new TypeReference<>() {});
             return result;
 
+
         }
 
     }
