@@ -17,6 +17,7 @@ public class Parser implements Func {
         JSONParser parser = new JSONParser();
         JSONObject object = (JSONObject) parser.parse(response);
 
+
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
