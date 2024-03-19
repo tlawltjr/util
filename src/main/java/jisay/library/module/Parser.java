@@ -28,6 +28,7 @@ public class Parser implements Func {
             JSONObject jsonObject = (JSONObject) object.get(key);
             O result = mapper.readValue(jsonObject.toJSONString(), new TypeReference<>() {});
             return result;
+
         }
 
     }
