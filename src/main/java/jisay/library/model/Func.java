@@ -1,6 +1,7 @@
 package jisay.library.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import org.json.simple.parser.ParseException;
 import org.modelmapper.ModelMapper;
 
@@ -18,5 +19,5 @@ public interface Func {
         return modelMapper.map(dto, entityClass);
     }
 
-    <O> O parse(String response, String key) throws JsonProcessingException, ParseException;
+    <O> O parse(String response, String key, TypeReference<?> type) throws JsonProcessingException, ParseException;
 }

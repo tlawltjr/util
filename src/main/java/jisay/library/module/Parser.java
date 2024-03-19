@@ -13,21 +13,20 @@ import org.json.simple.parser.ParseException;
 public class Parser implements Func {
 
     @Override
-    public <O> O parse(String response, String key) throws JsonProcessingException, ParseException {
+    public <O> O parse(String response, String key, TypeReference<?> type) throws JsonProcessingException, ParseException {
         JSONParser parser = new JSONParser();
         JSONObject object = (JSONObject) parser.parse(response);
-
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         if(object.get(key) instanceof JSONArray) {
             JSONArray array = (JSONArray) object.get(key);
-            O result = mapper.readValue(array.toJSONString(), new TypeReference<>() {});
+            O result = (O) mapper.readValue(array.toJSONString(), type);
             return result;
         }else{
             JSONObject jsonObject = (JSONObject) object.get(key);
-            O result = mapper.readValue(jsonObject.toJSONString(), new TypeReference<>() {});
+            O result = (O) mapper.readValue(jsonObject.toJSONString(), type);
             return result;
 
 
