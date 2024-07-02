@@ -5,12 +5,13 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jisay.library.model.Func;
+import jisay.library.model.Parsing;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class Parser implements Func {
+public class Parser implements Parsing {
 
     @Override
     public <O> O parse(String response, String key, TypeReference<?> type) throws JsonProcessingException, ParseException {

@@ -19,5 +19,5 @@ public interface Func {
         return modelMapper.map(dto, entityClass);
     }
 
-    <O> O parse(String response, String key, TypeReference<?> type) throws JsonProcessingException, ParseException;
+
 }
