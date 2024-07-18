@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.security.GeneralSecurityException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -87,12 +88,18 @@ public class DriveQuickstart {
                 .setFields("nextPageToken, files(id, name)")
                 .execute();
         List<File> files = result.getFiles();
+        List list = new ArrayList();
         if (files == null || files.isEmpty()) {
             System.out.println("No files found.");
         } else {
             System.out.println("Files:");
             for (File file : files) {
-                System.out.printf("%s (%s)\n", file.getName(), file.getId());
+                if(file.getName() == "심지석 이력서"){
+
+                    list.add(service.files().copy(file.getId(),file));
+                    System.out.println(list.size());
+
+                }
             }
         }
     }
